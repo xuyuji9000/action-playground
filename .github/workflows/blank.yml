@@ -36,4 +36,4 @@ jobs:
       uses: joelwmale/webhook-action@master
       env:
         WEBHOOK_URL: "47.101.49.134:3000"
-        data: '{"MyKey":"My Value"}'
+        data: "{'deployment': 'finished', 'project': 'actions'}"
