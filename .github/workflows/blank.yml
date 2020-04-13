@@ -17,7 +17,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
     env:
-      working-directory: /srv/actions-playground
+      working-directory: /srv/actions-playground/repo
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,3 +36,8 @@ jobs:
         echo test, and deploy your project.
         pwd
         ls -lath ./
+    
+    - name: Install dependency
+      run: |
+        npm install
+        pm2 restart actions-playground
