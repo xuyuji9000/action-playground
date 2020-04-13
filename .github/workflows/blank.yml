@@ -31,9 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-
-    - name: Webhook
-      uses: joelwmale/webhook-action@master
-      env:
-        WEBHOOK_URL: "47.101.49.134:3000"
-        data: "{'deployment': 'finished', 'project': 'actions'}"
+        ls -lath ./
