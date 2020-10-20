@@ -18,9 +18,11 @@ jobs:
         echo "------Get jq command information------"
         echo "which jq"
         which jq
+        echo ""
 
         echo "whereis jq"
         whereis jq
+        echo ""
 
         echo "jq --version"
         jq --version
@@ -29,6 +31,7 @@ jobs:
 
         echo "------Get commiter information------"
         echo "GITHUB_EVENT_PATH: ${GITHUB_EVENT_PATH}"
+        echo ""
 
         echo "Commiter:"
         cat ${GITHUB_EVENT_PATH} | jq .commits[0].committer.name
