@@ -14,9 +14,13 @@ jobs:
 
     steps:
     - id: step1
-      run: |
-        echo ${GITHUB_EVENT_PATH}
-        cat ${GITHUB_EVENT_PATH}
+      run: |        
+        echo "Get jq command information"
         which jq
         whereis jq
         jq --version
+
+        echo "Get commiter information"
+        echo ${GITHUB_EVENT_PATH}
+        cat ${GITHUB_EVENT_PATH} | jq .commits[0].committer.name
+        
