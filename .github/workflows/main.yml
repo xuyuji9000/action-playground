@@ -19,8 +19,10 @@ jobs:
         which jq
         whereis jq
         jq --version
+        echo ""
 
         echo "------Get commiter information------"
         echo ${GITHUB_EVENT_PATH}
         cat ${GITHUB_EVENT_PATH} | jq .commits[0].committer.name
+        echo ""
         
